@@ -42,7 +42,9 @@ Data dictionary for UCLA data [here](https://drive.google.com/file/d/1ScJGMNFG4H
 ### [Pew](code/1a_pew_cleaning.ipynb)
 For the Pew dataset, I needed to map out the integers in just about every column to their corresponding meaning since they were categorical and not ordinal. I also needed to map values like "999" which meant "Refused" to null values. I dropped columns that had a lot of nulls, except for those that seemed to be the only indicator of something important. For example, I was able to drop a column denoting socioeconomic class because I had another column with income brackets. After dropping those columns and narrowing to the columns I wanted to use (largely demographic info), I dropped the remaining nulls, created dummies, and ended up with 4,325 rows and 50 columns. 
 
-<summary>
+<details open>
+<summary>Pew column descriptions</summary>
+ <br>
 |Column|Type|Description|
 |---|---|---|
 |defund_support|int64|A value between 0 and 1 (adapted from 1-5 scale in original survey) indicating what the participant believes should happen to funding for the police (1 = Increased a lot, 2 = Increased a little, 3 = Stay about the same, 4 = Decreased a little, 5 = Decreased a lot)|
@@ -95,7 +97,7 @@ For the Pew dataset, I needed to map out the integers in just about every column
 |voter_status_not_registered|int64|Binary indicator of whether the participant said they were not registered to vote (0 = Didn't say not registered, 1 = Said not registered)|
 |voter_status_prob_registered|int64|Binary indicator of whether the participant said they were probably registered to vote (0 = Didn't say probably registered, 1 = Said probably registered)|
 |voter_status_registered|int64|Binary indicator of whether the participant said they were registered to vote (0 = Didn't say registered, 1 = Said registered)|
-</summary>
+</details>
     
     
 ### [UCLA](code/1b_ucla_cleaning.ipynb)
