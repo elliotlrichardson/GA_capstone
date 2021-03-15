@@ -20,6 +20,8 @@ For my capstone project, I have chosen to make a targeting model for campaigns a
 
 I will use regression models to produce support scores between 0-100, as is customary for political targeting models. I'm limiting the features to be largely demographic (i.e. race, age, gender, etc) in order to replicate the information that a campaign might have to work with. Model performance will be evaluated using the R<sup>2</sup> score and the baseline will be the average support score among panel participants. I'd like to outperform the baseline by at least 50%.
 
+Presentation slides can be found [here](/files/capstone_slides.pdf).
+
 ## Summary of findings
 
 Based on the models I created, I'm not sure that this is enough information to create a truly helpful targeting model. Both had large RMSEs (0.23 and 0.30) for a target between 0 and 1 so I wouldn't be very confident building an outreach model on these scores. I'd be really interested to see what the RMSEs are for models produced by professional targeting firms! I imagine that the consumer data they have is extremely helpful but it seems exceedingly difficult to predict something as nuanced as this. The shared important features from these two models were age, religion, and education; the models built on the Pew data put more emphasis on political party, while the models of the UCLA dataset put more emphasis on race. However, I'd take these observations with a rather large grain of salt as the models were limited in their accuracy.
@@ -174,7 +176,33 @@ For this dataset, the columns were already numerical except for the state and co
 
 </details>    
 
-## Modeling and analysis
+
+## Exploratory analysis
+
+### 1. As expected, your political party says a lot.
+
+Part of the reason that I wanted to do this project is because there are fault lines through the Democratic party when it comes to support of the police and the prison industrial complex. Predictably, the most support for defunding the police did come from the Democratic party, but the majority of the Democratic party is happy with the status quo and nearly 20% of Democrats actually support increasing police budgets.
+
+ ![Opinion on police funding by party](/files/defund_support_by_party.png)
+
+### 2. Unfavorable opinions of the police \neq support for defunding.
+
+In my exploratory analysis, I discovered that an unfavorable opinion of the police does not necessarily translate into support for defunding the police. For example, the below charts show that nearly 70% of Black participants had an unfavorable view of the police, but only approximately 40% supported decreasing the police budget by any amount. I see this as a space of opportunity for campaigns that may be building support for defunding the police. Those people who have unfavorable opinions are likely open to hearing arguments in favor of defunding the police so it would be beneficial to reach out to those people with a targeted message.
+
+ ![Favorability of the police by race](/files/favorability_by_race.png)
+ 
+ ![Opinion on police funding by race](/files/defund_support_by_race.png)
+
+### 3. As always, the youth will lead the way. 
+
+I was not entirely surprised to see that students stand out as a section of the population with strong negative feelings about the police; more than 70% have either strong or somewhat unfavorable opinions. Young people are easily the most supportive of defunding the police as well so organizing students and the youth in every community will be important in mobilizing a grassroots movement against brutal policing and inhumane incarceration.
+
+ ![Favorability of the police by occupation](/files/favorability_by_employment.png)
+ 
+ ![Opinion on police funding by age](/files/defund_support_by_age.png)
+
+
+## Modeling
 
 I went through a very similar modeling process for each dataset. 
 
@@ -256,6 +284,8 @@ I went through a very similar modeling process for each dataset.
 |religion_none|0.0113|
 
 
+## Conclusion
 
+Based on the models I created, I'm not sure that this is enough information to create a truly helpful targeting model. Both had large RMSEs (0.24 and 0.30) for a target between 0 and 1 so I wouldn't be very confident building an outreach model on these scores. I'd be really interested to see what the RMSEs are for models produced by professional targeting firms! I imagine that the consumer data they have is extremely helpful but it seems exceedingly difficult to predict something as nuanced as this. The shared important features from these two models were age, religion, and education; the models built on the Pew data put more emphasis on political party, while the models of the UCLA dataset put more emphasis on race. However, I'd take these observations with a rather large grain of salt as the models were limited in their accuracy.
 
 
