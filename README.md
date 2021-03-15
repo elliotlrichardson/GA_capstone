@@ -42,7 +42,7 @@ Data dictionary for UCLA data [here](https://drive.google.com/file/d/1ScJGMNFG4H
 ### [Pew](code/1a_pew_cleaning.ipynb)
 For the Pew dataset, I needed to map out the integers in just about every column to their corresponding meaning since they were categorical and not ordinal. I also needed to map values like "999" which meant "Refused" to null values. I dropped columns that had a lot of nulls, except for those that seemed to be the only indicator of something important. For example, I was able to drop a column denoting socioeconomic class because I had another column with income brackets. After dropping those columns and narrowing to the columns I wanted to use (largely demographic info), I dropped the remaining nulls, created dummies, and ended up with 4,325 rows and 50 columns. 
 
-<details open>
+<details>
 <summary>Pew column descriptions</summary>
  <br>
 
@@ -104,6 +104,10 @@ For the Pew dataset, I needed to map out the integers in just about every column
     
 ### [UCLA](code/1b_ucla_cleaning.ipynb)
 For this dataset, the columns were already numerical except for the state and congressional district. There were a few cases where columns contained empty strings, so the entire column was cast as objects but I replaced empty strings with null values and converted all of those back to numerical data types. Then I went through a similar process of dropping columns with too many nulls to be helpful, narrowed to the ones I felt a campaign might realistically have access to, and then dropped the remaining rows that still had null values. After dummying the 'state' column, I ended up with 4,052 rows and 107 columns. 
+
+<details>
+<summary>UCLA column descriptions</summary>
+ <br>
 
 |Column|Type|Description|
 |---|---|---|
@@ -168,6 +172,7 @@ For this dataset, the columns were already numerical except for the state and co
 |education|int64|Description (1 = Less than 4th grade, 2 = Completed middle school, 3 = Some high school, 4 = Completed high school, 5 = Vocational training, 6 = Some college, 7 = Associate degree, 8 = Bachelor's degree, 9 = Some grad school, 10 = Masters degree, 11 = Doctorate degree)|
 |state_XX|int64|Binary indicator of whether the participant lives in a state, represented by the abbreviation in the column name (0 = Doesn't live in state, 1 = Lives in state)|
 
+</details>    
 
 ## Modeling and analysis
 
