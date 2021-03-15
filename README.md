@@ -185,7 +185,7 @@ Part of the reason that I wanted to do this project is because there are fault l
 
  ![Opinion on police funding by party](/files/defund_support_by_party.png)
 
-### 2. Unfavorable opinions of the police $\neq$ support for defunding.
+### 2. Unfavorable opinions of the police ≠ support for defunding.
 
 In my exploratory analysis, I discovered that an unfavorable opinion of the police does not necessarily translate into support for defunding the police. For example, the below charts show that nearly 70% of Black participants had an unfavorable view of the police, but only approximately 40% supported decreasing the police budget by any amount. I see this as a space of opportunity for campaigns that may be building support for defunding the police. Those people who have unfavorable opinions are likely open to hearing arguments in favor of defunding the police so it would be beneficial to reach out to those people with a targeted message.
 
