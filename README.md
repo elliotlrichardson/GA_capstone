@@ -45,6 +45,7 @@ For the Pew dataset, I needed to map out the integers in just about every column
 <details open>
 <summary>Pew column descriptions</summary>
  <br>
+
 |Column|Type|Description|
 |---|---|---|
 |defund_support|int64|A value between 0 and 1 (adapted from 1-5 scale in original survey) indicating what the participant believes should happen to funding for the police (1 = Increased a lot, 2 = Increased a little, 3 = Stay about the same, 4 = Decreased a little, 5 = Decreased a lot)|
@@ -97,6 +98,7 @@ For the Pew dataset, I needed to map out the integers in just about every column
 |voter_status_not_registered|int64|Binary indicator of whether the participant said they were not registered to vote (0 = Didn't say not registered, 1 = Said not registered)|
 |voter_status_prob_registered|int64|Binary indicator of whether the participant said they were probably registered to vote (0 = Didn't say probably registered, 1 = Said probably registered)|
 |voter_status_registered|int64|Binary indicator of whether the participant said they were registered to vote (0 = Didn't say registered, 1 = Said registered)|
+    
 </details>
     
     
